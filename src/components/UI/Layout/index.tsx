@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // pages
-import PwdManagerPage from '../../pages/PwdManagerPage';
+import PwdManagerPage from '../../../pages/PwdManagerPage';
 
-export const MainLayout: React.FunctionComponent = () => {
+const MainLayout: FC = () => {
   return (
     <main>
       <section className='app-content'>
@@ -15,3 +15,5 @@ export const MainLayout: React.FunctionComponent = () => {
     </main>
   );
 };
+
+export default MainLayout;

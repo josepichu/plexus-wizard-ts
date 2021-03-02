@@ -6,7 +6,7 @@ import { I18nextProvider } from 'react-i18next';
 import locale from './locale';
 
 // components
-import { MainLayout } from './components/layout/MainLayout';
+import MainLayout from './components/UI/Layout';
 
 const App: FC = () => (
   <I18nextProvider i18n={locale}>
