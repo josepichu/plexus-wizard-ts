@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
+import { Step, StepComponentProps } from '../../../../models/Wizard/Step';
 
 // assets
 import './index.scss';
 
-const ProductInfo: FC = () => {
+const Info: FC<StepComponentProps> = ({ onChangeValid }) => {
   return <>info</>;
 };
 
-export default ProductInfo;
+export default Info;

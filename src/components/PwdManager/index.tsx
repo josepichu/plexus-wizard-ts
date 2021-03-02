@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React, { FC } from 'react';
 import { Step } from '../../models/Wizard/Step';
 
@@ -10,23 +11,24 @@ import Result from './steps/Result';
 // assets
 import './index.scss';
 
-// wizard steps definition
-const steps: Step[] = [
-  {
-    id: 'pwd-manager-info',
-    component: <Info />,
-  },
-  {
-    id: 'pwd-manager-form',
-    component: <Form />,
-  },
-  {
-    id: 'pwd-manager-result',
-    component: <Result />,
-  },
-];
-
 const PwdManager: FC = () => {
+  // wizard steps definition
+  const steps: Step[] = [
+    {
+      id: 'pwd-manager-info',
+      component: props => <Info {...props} />,
+      // isValid: true,
+    },
+    {
+      id: 'pwd-manager-form',
+      component: props => <Form {...props} />,
+    },
+    {
+      id: 'pwd-manager-result',
+      component: props => <Result {...props} />,
+    },
+  ];
+
   return (
     <section className='pwd-manager'>
       <Wizard steps={steps} />
