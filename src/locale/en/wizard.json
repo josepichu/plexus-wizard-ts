@@ -1,0 +1,6 @@
+{
+    "successTitle": "Proceso finalizado correctamente",
+    "errorTitle": "Ha ocurrido un problema",
+    "successMsg": "Proceso finalizado correctamente !",
+    "errorMsg": "No ha sido posible completar la operación. inténtelo de nuevo más tarde"
+}

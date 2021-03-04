@@ -1,0 +1,9 @@
+@import '../../../../styles/base.scss';
+
+.wizard-content-step {
+  padding: $space * 3;
+
+  .step-title {
+    color: $primary-color;
+  }
+}

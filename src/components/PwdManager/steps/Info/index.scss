@@ -1,0 +1,25 @@
+@import '../../../../styles/base.scss';
+
+.info {
+  .product-description-wrapper {
+    display: flex;
+
+    & .product-description {
+      background-color: $background-color;
+      padding: $space * 4;
+      filter: brightness(1.16);
+      min-height: 250px;
+      width: 33%;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    & .icon {
+      color: $secondary-color;
+    }
+
+    & :not(:last-child) {
+      margin-right: $space * 2;
+    }
+  }
+}

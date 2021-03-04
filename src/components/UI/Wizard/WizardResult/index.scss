@@ -1,0 +1,24 @@
+@import '../../../../styles/base.scss';
+
+.container {
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  align-items: 'center';
+  flex-direction: row;
+  margin-top: ($space * 4);
+
+  & h2 {
+    margin-left: $space * 2;
+  }
+}
+
+.success {
+  color: $success;
+}
+
+.error {
+  color: $error;
+}

@@ -3,7 +3,7 @@
 .wizard-footer {
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: $space * 3;
 
   border-top: 1px solid #d5d0d0;
   & button {

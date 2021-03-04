@@ -1,9 +1,11 @@
 {
+  "close": "Cerrar",
   "cancel": "Cancelar",
   "next": "Siguiente",
   "back": "Atrás",
-  "password": "Contraseña",
-  "passwordTitle": "Crea tu contraseña maestra",
-  "repeatPassword": "Repite tu contraseña",
-  "repeatPasswordTitle": "Repite tu contraseña maestra"
+  "form": {
+    "required": "Campo requerido",
+    "equal": "password1 and password2 no coinciden",
+    "password": "La contraseña debe tener 1 mayúscula, 1 numero, y entre 4 y 24 caracteres"
+  }
 }

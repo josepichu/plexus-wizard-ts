@@ -11,8 +11,20 @@ interface WizardHeaderProps {
   steps: Step[];
 }
 
-const WizardHeader: FC<WizardHeaderProps> = () => {
-  return <>header</>;
+const WizardHeader: FC<WizardHeaderProps> = ({ steps, activeStep }) => {
+  return (
+    <div className='wizard-header'>
+      <div className='steps'>
+        {steps.map((step: Step, stepIndex: number) => {
+          return (
+            <div key={`wizard-header-${step.id}`} className={'step ' + (activeStep === stepIndex ? 'active' : '')}>
+              <span>{stepIndex + 1}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default WizardHeader;

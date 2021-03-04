@@ -1,9 +1,11 @@
 {
+  "close": "Cerrar",
   "cancel": "Cancel",
   "next": "Next",
   "back": "Back",
-  "password": "Password",
-  "passwordTitle": "Create your master password",
-  "repeatPassword": "Repeat your password",
-  "repeatPasswordTitle": "Repeat your master password"
+  "form": {
+    "required": "Campo requerido",
+    "equal": "password1 and password2 no coinciden",
+    "password": "La contraseña debe tener 1 mayúscula, 1 numero, y entre 4 y 24 caracteres"
+  }
 }
