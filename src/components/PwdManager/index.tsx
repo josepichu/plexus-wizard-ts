@@ -72,16 +72,11 @@ const PwdManager: FC = () => {
   ];
 
   const onSubmit = async (values: formValues): Promise<boolean> => {
-    return new Promise<boolean>((resolve, reject) => {
-      submitForm(values['password1']).then(
-        (res: Response) => {
-          if (res.status === 200) resolve(true);
-          else resolve(false);
-        },
-        res => {
-          resolve(false);
-        },
-      );
+    return new Promise<boolean>(resolve => {
+      submitForm(values['password1']).then((res: Response) => {
+        if (res.status === 200) resolve(true);
+        else resolve(false);
+      });
     });
   };
 

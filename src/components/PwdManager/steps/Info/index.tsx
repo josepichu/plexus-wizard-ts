@@ -6,7 +6,7 @@ import { faCoffee, faCreditCard, faExchangeAlt, faMobileAlt } from '@fortawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // models
-import React, { ChangeEvent, FC } from 'react';
+import React, { FC } from 'react';
 
 // assets
 import './index.scss';

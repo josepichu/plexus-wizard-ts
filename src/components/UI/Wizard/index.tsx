@@ -29,7 +29,7 @@ const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, 
   const [activeStep, setActiveStep] = React.useState(initActiveStep || 0);
 
   // valid steps management
-  const [validStep, setValidStep] = React.useState({});
+  const [, setValidStep] = React.useState({});
 
   // from successful
   const [isSuccess, setIsSuccess] = React.useState(false);

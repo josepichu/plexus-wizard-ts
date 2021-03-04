@@ -13,7 +13,7 @@ interface CheckboxProps {
   className?: string;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ label, type, name, error, checked, onChange, className }) => {
+const Checkbox: FC<CheckboxProps> = ({ label, type, name, error, checked, onChange }) => {
   return (
     <>
       {error && <div className='error'>{error}</div>}

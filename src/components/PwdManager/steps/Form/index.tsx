@@ -6,9 +6,6 @@ import { faQuestion, faUnlock } from '@fortawesome/free-solid-svg-icons';
 // components
 import Input from '../../../UI/Form/Input';
 
-// hooks
-import useForm from '../../../../hooks/useForm';
-
 // models
 import { StepComponentProps } from '../../../../models/Wizard/Step';
 
