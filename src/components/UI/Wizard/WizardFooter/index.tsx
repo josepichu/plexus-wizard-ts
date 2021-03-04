@@ -25,23 +25,28 @@ const WizardFooter: FC<WizardFooterProps> = ({ activeStep, steps, onCancel, onNe
   return (
     <div className='wizard-footer'>
       <div className='btn-left'>
-        <button onClick={onCancel} disabled={activeStep === 0 || isLastStep} hidden={isLastStep}>
+        <button
+          className='wizard-footer-cancel'
+          onClick={onCancel}
+          disabled={activeStep === 0 || isLastStep}
+          hidden={isLastStep}
+        >
           {t('common.cancel')}
         </button>
       </div>
       <div className='btn-right'>
-        <button onClick={onBack} className='btn-back' disabled={activeStep === 0} hidden={isLastStep}>
+        <button className='wizard-footer-back' onClick={onBack} disabled={activeStep === 0} hidden={isLastStep}>
           {t('common.back')}
         </button>
         <button
+          className='wizard-footer-next'
           onClick={onNext}
-          className='btn-next'
           disabled={!steps[activeStep].isValid || submiting}
           hidden={isLastStep}
         >
           {t('common.next')}
         </button>
-        <button onClick={onClose} className='btn-next' hidden={!isLastStep}>
+        <button className='wizard-footer-close' onClick={onClose} hidden={!isLastStep}>
           {t('common.close')}
         </button>
       </div>

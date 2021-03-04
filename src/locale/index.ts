@@ -4,7 +4,7 @@ import es from './es';
 import en from './en';
 
 // the translations
-const resources = {
+export const resources = {
   es: {
     translation: es,
   },
