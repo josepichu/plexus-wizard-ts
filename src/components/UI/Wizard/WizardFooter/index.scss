@@ -21,7 +21,28 @@
       opacity: 0.3;
     }
   }
-  & .wizard-footer-back{
+  & .wizard-footer-back {
     margin-right: $space;
+  }
+}
+
+@media only screen and (max-width: $size-sm) {
+  .wizard-footer {
+    flex-direction: column;
+    align-items: center;
+    & .wizard-footer-next {
+      flex-direction: column;
+      margin-top: $space * 2;
+      align-items: center;
+    }
+
+    & button,
+    .btn-left,
+    .btn-right {
+      width: 100%;
+    }
+    & .btn-right {
+      margin-top: $space * 2;
+    }
   }
 }

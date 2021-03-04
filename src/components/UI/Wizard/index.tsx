@@ -69,8 +69,6 @@ const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, 
       });
   }, []);
 
-  console.log(steps);
-
   const isLastStep = activeStep === steps.length - 2;
 
   // init form values from step validation

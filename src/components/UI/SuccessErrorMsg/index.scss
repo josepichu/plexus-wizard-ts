@@ -5,9 +5,6 @@
 }
 
 .box {
-  display: flex;
-  align-items: 'center';
-  flex-direction: row;
   margin-top: ($space * 4);
 
   & h2 {

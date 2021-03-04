@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media only screen and (max-width: $size-sm) {
+  .product-description-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .product-description {
+      margin-bottom: $space * 2;
+      min-width: 80%;
+      width: 80%;
+    }
+  }
+}

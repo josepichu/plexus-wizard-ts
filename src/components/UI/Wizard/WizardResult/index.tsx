@@ -21,7 +21,11 @@ const WizardResult: FC<StepComponentProps> = ({ success, successMsg, errorMsg })
     title = t('wizard.errorTitle');
   }
 
-  return <SuccessErrorMsg success={success} title={title} message={message} />;
+  return (
+    <div className='message'>
+      <SuccessErrorMsg success={success} title={title} message={message} />
+    </div>
+  );
 };
 
 export default WizardResult;
