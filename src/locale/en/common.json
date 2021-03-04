@@ -1,11 +1,11 @@
 {
-  "close": "Cerrar",
+  "close": "Close",
   "cancel": "Cancel",
   "next": "Next",
   "back": "Back",
   "form": {
-    "required": "Campo requerido",
-    "equal": "password1 and password2 no coinciden",
-    "password": "La contraseña debe tener 1 mayúscula, 1 numero, y entre 4 y 24 caracteres"
+    "required": "Required field",
+    "equal": "password1 and password2 are not equal",
+    "password": "The password must have 1 capital letter, 1 number, and between 4 and 24 characters"
   }
 }
