@@ -20,11 +20,12 @@ interface WizardProps {
   initActiveStep?: number;
   steps: Step[];
   onSubmit(values: formValues): Promise<boolean>;
+  onClose?(): void;
   successMsg: string;
   errorMsg: string;
 }
 
-const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, errorMsg }) => {
+const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, errorMsg, onClose }) => {
   // active step
   const [activeStep, setActiveStep] = React.useState(initActiveStep || 0);
 
@@ -127,8 +128,8 @@ const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, 
   };
 
   // handle close
-  const onClose = () => {
-    //
+  const handleClose = () => {
+    onClose && onClose();
   };
 
   return (
@@ -154,7 +155,7 @@ const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, 
         onCancel={handleCancel}
         onNext={handleNext}
         onBack={handleBack}
-        onClose={onClose}
+        onClose={handleClose}
         submiting={submiting}
       />
     </section>

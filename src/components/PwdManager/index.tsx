@@ -67,7 +67,6 @@ const PwdManager: FC = () => {
           type: 'text',
         },
       ],
-      submit: true,
     },
   ];
 
@@ -80,9 +79,19 @@ const PwdManager: FC = () => {
     });
   };
 
+  const onClose = () => {
+    // TODO
+  };
+
   return (
     <section className='pwd-manager'>
-      <Wizard steps={steps} onSubmit={onSubmit} successMsg={t('wizard.successMsg')} errorMsg={t('wizard.errorMsg')} />
+      <Wizard
+        steps={steps}
+        onSubmit={onSubmit}
+        successMsg={t('wizard.successMsg')}
+        errorMsg={t('wizard.errorMsg')}
+        onClose={onClose}
+      />
     </section>
   );
 };

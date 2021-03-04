@@ -6,7 +6,6 @@ export interface Step {
   title?: string;
   component: (props: StepComponentProps) => JSX.Element;
   isValid?: boolean;
-  submit?: boolean;
   formConfig?: useFormItem[];
 }
 
