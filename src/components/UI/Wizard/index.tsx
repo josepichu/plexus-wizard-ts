@@ -113,12 +113,19 @@ const Wizard: FC<WizardProps> = ({ steps, initActiveStep, onSubmit, successMsg, 
   const handleNext = () => {
     if (isLastStep && isValid) {
       setSubmiting(true);
-      onSubmit(values).then(success => {
-        setIsSuccess(success);
-        //
-        setActiveStep(prevStep => prevStep + 1);
-        setSubmiting(false);
-      });
+      onSubmit(values)
+        .then(
+          success => {
+            setIsSuccess(success);
+          },
+          () => {
+            setIsSuccess(false);
+          },
+        )
+        .finally(() => {
+          setActiveStep(prevStep => prevStep + 1);
+          setSubmiting(false);
+        });
     } else setActiveStep(prevStep => prevStep + 1);
   };
 
