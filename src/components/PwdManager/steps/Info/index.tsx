@@ -46,16 +46,14 @@ const Info: FC<StepComponentProps> = ({ values, errors, handleInputChange }) => 
 
       <div className='footer-info'>
         <p>{t('pwdManager.info.almost_done')}</p>
-        <p>
-          <Checkbox
-            name='acceptedConditions'
-            type='checkbox'
-            onChange={handleInputChange}
-            checked={values['acceptedConditions']}
-            error={errors['acceptedConditions']}
-          />
-          {t('pwdManager.info.rgpd_desc')} <a href='#'>{t('pwdManager.info.rgpd_link')}</a>.
-        </p>
+        <Checkbox
+          name='acceptedConditions'
+          type='checkbox'
+          onChange={handleInputChange}
+          checked={values['acceptedConditions'] || false}
+          error={errors['acceptedConditions']}
+        />
+        {t('pwdManager.info.rgpd_desc')} <a href='#'>{t('pwdManager.info.rgpd_link')}</a>.
       </div>
     </div>
   );
