@@ -17,8 +17,11 @@ const WizardHeader: FC<WizardHeaderProps> = ({ steps, activeStep }) => {
       <div className='steps'>
         {steps.map((step: Step, stepIndex: number) => {
           return (
-            <div key={`wizard-header-${step.id}`} className={'step ' + (activeStep === stepIndex ? 'active' : '')}>
-              <span>{stepIndex + 1}</span>
+            <div
+              key={`wizard-header-${step.id}`}
+              className={`step ${activeStep === stepIndex ? 'active' : ''} ${activeStep > stepIndex ? 'done' : ''}`}
+            >
+              <span>{activeStep > stepIndex ? '✓' : stepIndex + 1}</span>
             </div>
           );
         })}

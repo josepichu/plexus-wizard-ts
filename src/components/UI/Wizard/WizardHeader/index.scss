@@ -8,18 +8,18 @@
   border-radius: 5px 5px 0px 0px;
   & .steps {
     display: flex;
-    max-width: 50%;
+    max-width: 30%;
     margin: 0 auto;
     padding-top: 10px;
 
     & .step {
-      width: 80%;
+      width: 50%;
       text-align: center;
       border-bottom: 3px solid $inactive;
       line-height: 0.1em;
       margin: 10px 0 20px;
       & span {
-        padding: 4px 10px;
+        padding: 2px 8px;
         border-radius: 25px;
         border: 2px solid $inactive;
         background: $inactive;
@@ -33,6 +33,14 @@
         background: $secondary-color;
         color: white;
         border: 1px solid $secondary-color;
+      }
+    }
+    & .step.done {
+      & span {
+        padding: 2px 8px;
+        background: $primary-color;
+        color: white;
+        border: 1px solid $primary-color;
       }
     }
   }
