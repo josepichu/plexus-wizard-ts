@@ -20,7 +20,7 @@ const Input: FC<InputProps> = ({ label, type, name, placeholder, icon, error, va
     <div className={`input-container ${className || ''}`}>
       {label && <label>{label}</label>}
       <div>
-        {icon}
+        <i className='icon'>{icon}</i>
         <input
           className={'input-field ' + (error ? 'error' : '')}
           type={type}

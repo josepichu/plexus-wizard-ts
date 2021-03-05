@@ -1,6 +1,6 @@
 {
-    "successTitle": "Proceso finalizado correctamente",
-    "errorTitle": "Ha ocurrido un problema",
+    "successTitle": "Tu password Manager ya está creado!",
+    "errorTitle": "Ha ocurrido un error",
     "successMsg": "Muchas gracias por confiar en nosotros y disfrute de su nuevo producto",
-    "errorMsg": "No ha sido posible completar la operación. inténtelo de nuevo más tarde"
+    "errorMsg": "No hemos podido modificar tu Contraseña Maestra. Inténtalo más tarde."
 }

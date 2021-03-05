@@ -15,7 +15,7 @@ interface CheckboxProps {
 
 const Checkbox: FC<CheckboxProps> = ({ label, type, name, error, checked, onChange }) => {
   return (
-    <>
+    <div className='checkbox_container'>
       {error && <div className='error'>{error}</div>}
       <input
         className={'input-field ' + (error ? 'error' : '')}
@@ -25,7 +25,7 @@ const Checkbox: FC<CheckboxProps> = ({ label, type, name, error, checked, onChan
         onChange={onChange}
       />
       {label && <label>{label}</label>}
-    </>
+    </div>
   );
 };
 

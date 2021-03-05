@@ -8,54 +8,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // models
 import React, { FC } from 'react';
 
+// components
+import Checkbox from '../../../UI/Form/Checkbox';
+
 // assets
 import './index.scss';
-import Checkbox from '../../../UI/Form/Checkbox';
+import image1 from '../../../../assets/img/pwdManager/step1_image_one.jpg';
+import image2 from '../../../../assets/img/pwdManager/step1_image_two.jpg';
 
 const Info: FC<StepComponentProps> = ({ values, errors, handleInputChange }) => {
   const { t } = useTranslation();
 
   return (
-    <div className='info'>
-      <div className='product-description-wrapper'>
-        <div className='product-description'>
-          <FontAwesomeIcon icon={faCoffee} size='3x' className='icon' />
-          <h4>{t('pwdManager.info.comisions_title')}</h4>
-          <hr />
-          {t('pwdManager.info.comisions_description')}
+    <section className='info'>
+      <div className='info__images_container'>
+        <div>
+          <img src={image1} alt='' />
+          <p>{t('pwdManager.info.paragraph1')}</p>
         </div>
-        <div className='product-description'>
-          <FontAwesomeIcon icon={faExchangeAlt} size='3x' className='icon' />
-          <h4>{t('pwdManager.info.transfers_title')}</h4>
-          <hr />
-          {t('pwdManager.info.transfers_description')}
-        </div>
-        <div className='product-description'>
-          <FontAwesomeIcon icon={faCreditCard} size='3x' className='icon' />
-          <h4>{t('pwdManager.info.card_title')}</h4>
-          <hr />
-          {t('pwdManager.info.card_description')}
-        </div>
-        <div className='product-description'>
-          <FontAwesomeIcon icon={faMobileAlt} size='3x' className='icon' />
-          <h4>{t('pwdManager.info.phone_title')}</h4>
-          <hr />
-          {t('pwdManager.info.phone_description')}
+        <div>
+          <img src={image2} alt='' />
+          <p>{t('pwdManager.info.paragraph2')}</p>
         </div>
       </div>
 
-      <div className='footer-info'>
-        <p>{t('pwdManager.info.almost_done')}</p>
-        <Checkbox
-          name='acceptedConditions'
-          type='checkbox'
-          onChange={handleInputChange}
-          checked={values['acceptedConditions'] || false}
-          error={errors['acceptedConditions']}
-        />
-        {t('pwdManager.info.rgpd_desc')} <a href='#'>{t('pwdManager.info.rgpd_link')}</a>.
+      <div className='info__description'>
+        <h2>{t('pwdManager.info.title2')}</h2>
+        <p>{t('pwdManager.info.paragraph3')}</p>
+        <h2>{t('pwdManager.info.title3')}</h2>
+        <p>{t('pwdManager.info.paragraph4')}</p>
       </div>
-    </div>
+
+      <div className='info__rgpd'>
+        <label htmlFor='rgpd'>
+          <Checkbox
+            name='acceptedConditions'
+            type='checkbox'
+            onChange={handleInputChange}
+            checked={values['acceptedConditions'] || false}
+          />
+          <p>{t('pwdManager.info.rgpd')}</p>
+        </label>
+      </div>
+    </section>
   );
 };
 

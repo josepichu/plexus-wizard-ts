@@ -2,6 +2,9 @@
 
 .input-container {
   width: 100%;
+  & svg {
+    position: absolute;
+  }
 
   & label {
     color: $secondary-color;
@@ -14,16 +17,15 @@
     margin-bottom: ($space * 3);
     margin-top: $space;
     & .icon {
-      padding: $space * 2;
+      padding: $space * 3;
       background: $secondary-color;
       color: $white;
-      min-width: 50px;
-      text-align: center;
+      width: 20px;
     }
 
     & .input-field {
       width: 100%;
-      padding: $space * 2;
+      padding: $space * 3;
       outline: none;
     }
 

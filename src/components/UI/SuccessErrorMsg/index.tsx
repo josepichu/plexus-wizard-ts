@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // assets
 import './index.scss';
+import successImg from '../../../assets/img/success.jpg';
+import failureImg from '../../../assets/img/failure.jpg';
 
 interface SuccessErrorMsgProps {
   success: boolean;
@@ -13,15 +15,12 @@ interface SuccessErrorMsgProps {
 
 const SuccessErrorMsg: FC<SuccessErrorMsgProps> = ({ success, title, message }) => {
   return (
-    <div className='container'>
-      <FontAwesomeIcon
-        icon={success ? faThumbsUp : faExclamation}
-        size='6x'
-        className={`icon ${success ? 'success' : 'error'}`}
-      />
-      <div className={`box ${success ? 'success' : 'error'}`}>{title && <h2>{title}</h2>}</div>
-
-      <h4>{message}</h4>
+    <div className='msg_container'>
+      <img src={success ? successImg : failureImg} className='msg_container__img' />
+      <div className='msg_container__text'>
+        <div className={`title ${success ? 'success' : 'error'}`}>{title && <span>{title}</span>}</div>
+        <p>{message}</p>
+      </div>
     </div>
   );
 };

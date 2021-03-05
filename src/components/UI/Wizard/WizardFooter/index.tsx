@@ -7,6 +7,9 @@ import { Step } from '../../../../models/Wizard/Step';
 // assets
 import './index.scss';
 
+// compontens
+import Button from '../../../UI/Button';
+
 interface WizardFooterProps {
   activeStep: number;
   steps: Step[];
@@ -25,30 +28,26 @@ const WizardFooter: FC<WizardFooterProps> = ({ activeStep, steps, onCancel, onNe
   return (
     <div className='wizard-footer'>
       <div className='btn-left'>
-        <button
-          className='wizard-footer-cancel'
-          onClick={onCancel}
-          disabled={activeStep === 0 || isLastStep}
-          hidden={isLastStep}
-        >
+        <Button onClick={onCancel} disabled={activeStep === 0 || isLastStep || submiting} hidden={isLastStep}>
           {t('common.cancel')}
-        </button>
+        </Button>
       </div>
       <div className='btn-right'>
-        <button className='wizard-footer-back' onClick={onBack} disabled={activeStep === 0} hidden={isLastStep}>
+        <Button onClick={onBack} disabled={activeStep === 0 || submiting} hidden={isLastStep}>
           {t('common.back')}
-        </button>
-        <button
-          className='wizard-footer-next'
+        </Button>
+        <Button
+          className='primary'
           onClick={onNext}
           disabled={!steps[activeStep].isValid || submiting}
           hidden={isLastStep}
+          loading={submiting}
         >
           {t('common.next')}
-        </button>
-        <button className='wizard-footer-close' onClick={onClose} hidden={!isLastStep}>
+        </Button>
+        <Button onClick={onClose} hidden={!isLastStep}>
           {t('common.close')}
-        </button>
+        </Button>
       </div>
     </div>
   );

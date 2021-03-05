@@ -16,34 +16,30 @@ const ProductForm: FC<StepComponentProps> = ({ values, errors, handleInputChange
   const { t } = useTranslation();
 
   return (
-    <>
-      <p>
-        <Trans i18nKey='pwdManager.form.info'>
-          Para completar la contratación de su producto <strong>Cuenta Corriente OpenClose</strong> debe especificar una
-          contraseña que usará en su cuenta de <strong>administrador.</strong>
-        </Trans>
-      </p>
-
-      <p>{t('pwdManager.form.info2')}</p>
+    <section className='form'>
+      <p>{t('pwdManager.form.pinfo1')}</p>
+      <p>{t('pwdManager.form.pinfo2')}</p>
 
       <div className='password-container'>
         <Input
-          label={t('pwdManager.form.input_password')}
+          label={t('pwdManager.form.input_label')}
+          placeholder={t('pwdManager.form.input_label')}
           name='password1'
           type='password'
           onChange={handleInputChange}
           value={values['password1'] || ''}
-          icon={<FontAwesomeIcon icon={faUnlock} size='3x' className='icon' />}
+          icon={<FontAwesomeIcon icon={faUnlock} size='1x' />}
           error={errors['password1']}
         />
 
         <Input
-          label={t('pwdManager.form.input_password_repeat')}
+          label={t('pwdManager.form.input_label_repeat')}
+          placeholder={t('pwdManager.form.input_label_repeat')}
           name='password2'
           type='password'
           onChange={handleInputChange}
           value={values['password2'] || ''}
-          icon={<FontAwesomeIcon icon={faUnlock} size='3x' className='icon' />}
+          icon={<FontAwesomeIcon icon={faUnlock} size='1x' />}
           error={errors['password2']}
           className={'input'}
         />
@@ -52,13 +48,14 @@ const ProductForm: FC<StepComponentProps> = ({ values, errors, handleInputChange
       <p>{t('pwdManager.form.clue_info')}</p>
 
       <Input
+        label={t('pwdManager.form.clue_info_label')}
         name='pista'
         type='text'
         onChange={handleInputChange}
         value={values['pista'] || ''}
-        icon={<FontAwesomeIcon icon={faQuestion} size='3x' className='icon' />}
+        icon={<FontAwesomeIcon icon={faQuestion} size='1x' />}
       />
-    </>
+    </section>
   );
 };
 

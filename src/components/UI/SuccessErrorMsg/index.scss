@@ -1,21 +1,26 @@
 @import '../../../styles/base.scss';
 
-.container {
-  text-align: center;
-}
+.msg_container {
+  display: flex;
+  &__text {
+    color: $secondary-color;
 
-.box {
-  margin-top: ($space * 4);
+    .title {
+      font-size: 20px;
+      color: $secondary-color;
+      font-weight: bold;
+    }
+  }
 
-  & h2 {
-    margin-left: $space * 2;
+  &__img {
+    height: 50px;
   }
 }
 
-.success {
-  color: $success;
-}
+// .box {
+//   margin-top: ($space * 4);
 
-.error {
-  color: $error;
-}
+//   & h2 {
+//     margin-left: $space * 2;
+//   }
+// }
