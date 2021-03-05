@@ -12,21 +12,26 @@ interface WizardHeaderProps {
 }
 
 const WizardHeader: FC<WizardHeaderProps> = ({ steps, activeStep }) => {
+  const isLastStep = activeStep === steps.length - 1;
   return (
-    <div className='wizard-header'>
-      <div className='steps'>
-        {steps.map((step: Step, stepIndex: number) => {
-          return (
-            <div
-              key={`wizard-header-${step.id}`}
-              className={`step ${activeStep === stepIndex ? 'active' : ''} ${activeStep > stepIndex ? 'done' : ''}`}
-            >
-              <span>{activeStep > stepIndex ? '✓' : stepIndex + 1}</span>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <>
+      {!isLastStep && (
+        <div className='wizard-header'>
+          <div className='steps'>
+            {steps.map((step: Step, stepIndex: number) => {
+              return (
+                <div
+                  key={`wizard-header-${step.id}`}
+                  className={`step ${activeStep === stepIndex ? 'active' : ''} ${activeStep > stepIndex ? 'done' : ''}`}
+                >
+                  <span>{activeStep > stepIndex ? '✓' : stepIndex + 1}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
