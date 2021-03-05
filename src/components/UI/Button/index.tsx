@@ -8,18 +8,13 @@ interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   onClick(e): void;
-  className?: 'primary' | 'secondary';
+  className?: string;
   children: string;
 }
 
 const Button: FC<ButtonProps> = ({ hidden, disabled, onClick, className, children, loading }) => {
   return (
-    <button
-      className={`button ${className ? 'primary' : ''}`}
-      onClick={onClick}
-      disabled={disabled || false}
-      hidden={hidden || false}
-    >
+    <button className={`button ${className}`} onClick={onClick} disabled={disabled || false} hidden={hidden || false}>
       {loading ? '...' : children}
     </button>
   );
